@@ -2,8 +2,8 @@
 SCM_THEME_PROMPT_PREFIX="|"
 SCM_THEME_PROMPT_SUFFIX=""
 
-SCM_THEME_PROMPT_DIRTY=" ${bold_red}✗${normal}"
-SCM_THEME_PROMPT_CLEAN=" ${green}✓${normal}"
+SCM_THEME_PROMPT_DIRTY="" #" ${bold_red}✗${normal}"
+SCM_THEME_PROMPT_CLEAN="" #" ${green}✓${normal}"
 #SCM_GIT_CHAR="${green}±${normal}"
 SCM_SVN_CHAR="${bold_cyan}⑆${normal}"
 SCM_HG_CHAR="${bold_red}☿${normal}"
@@ -14,8 +14,8 @@ SCM_GIT_DETACHED_CHAR='⌿'
 SCM_GIT_AHEAD_CHAR="↑"
 SCM_GIT_BEHIND_CHAR="↓"
 SCM_GIT_UNTRACKED_CHAR="…"
-SCM_GIT_UNSTAGED_CHAR="✚" #${bold_white}
-SCM_GIT_STAGED_CHAR="●"
+SCM_GIT_UNSTAGED_CHAR="${yellow}✚${normal}" #${bold_white}
+SCM_GIT_STAGED_CHAR="${green}●${normal}"
 
 ### TODO: openSUSE has already colors enabled, check if those differs from stock
 # LS colors, made with http://geoff.greer.fm/lscolors/
