@@ -8,6 +8,8 @@ SCM_THEME_PROMPT_CLEAN="" #" ${green}✓${normal}"
 SCM_SVN_CHAR="${bold_cyan}⑆${normal}"
 SCM_HG_CHAR="${bold_red}☿${normal}"
 
+VIRTUALENV_THEME_PROMPT_PREFIX="("
+VIRTUALENV_THEME_PROMPT_SUFFIX=")"
 #SCM_THEME_BRANCH_PREFIX="${purple}"
 ##SCM_THEME_BRANCH_SUFFIX="${normal}" doesn't exist
 SCM_GIT_DETACHED_CHAR='⌿'
@@ -58,12 +60,12 @@ pure_prompt() {
 
     # make it work
     case $(id -u) in
-        0) PS1="$ps_root@$ps_host$(scm_prompt)$ps_path$ps_root_mark"
+        0) PS1="$(virtualenv_prompt)$ps_root@$ps_host$(scm_prompt)$ps_path$ps_root_mark"
             ;;
         1000)
-           PS1="$(clock_prompt)${normal} $ps_host$(scm_prompt)$ps_path$ps_user_mark" 
+           PS1="$(virtualenv_prompt)$(clock_prompt)${normal} $ps_host$(scm_prompt)$ps_path$ps_user_mark" 
             ;;
-        *) PS1="$ps_user@$ps_host$(scm_prompt)$ps_path$ps_user_mark"
+        *) PS1="$(virtualenv_prompt)$ps_user@$ps_host$(scm_prompt)$ps_path$ps_user_mark"
             ;;
     esac
 }
